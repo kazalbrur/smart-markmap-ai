@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+/* Custom markmap styles */
+.markmap-container {
+  width: 100%;
+  height: 600px;
+}
+
+.markmap-container svg {
+  width: 100%;
+  height: 100%;
+}
+
+.markmap-container .markmap-node {
+  cursor: pointer;
+}
+
+.markmap-container .markmap-node-text {
+  fill: var(--foreground);
+  font-family: var(--font-sans);
+}
